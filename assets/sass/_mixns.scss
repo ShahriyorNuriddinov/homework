@@ -1,0 +1,11 @@
+@mixin flex($a, $j, $g) {
+  display: flex;
+  align-items: $a;
+  justify-content: $j;
+  gap: $g;
+}
+@mixin paragraph($weiht, $size, $color) {
+  font-weight: $weiht;
+  font-size: $size;
+  color: $color;
+}

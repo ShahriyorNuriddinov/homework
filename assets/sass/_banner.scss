@@ -1,0 +1,21 @@
+@use "./mixns" as *;
+.banner {
+  text-align: center;
+  flex-direction: column;
+  @include flex(center, center, 40px);
+  background: url(../../img/banner.png);
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    @include paragraph(700, 40px, #fff);
+  }
+  &_btn button {
+    gap: 10px;
+    display: flex;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background: #4592ff;
+  }
+}

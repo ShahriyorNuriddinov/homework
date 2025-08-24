@@ -1,0 +1,66 @@
+@use "./mixns" as *;
+.add {
+  background-color: #262d33;
+  padding: 50px 0;
+  &_grid {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 400px 200px;
+    gap: 20px;
+  }
+  &_wrapper {
+    border-radius: 15px;
+    background-color: #fff;
+  }
+
+  .column {
+    grid-row: 1/3;
+  }
+  .rows {
+    grid-column: 2/4;
+  }
+  &_list {
+    background: url(../../img/add1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.nav {
+  @include flex(center, center, 20px);
+  flex-direction: column;
+  &_top {
+    @include flex(center, center, 20px);
+    flex-direction: column;
+    text-align: center;
+  }
+  & {
+    margin-top: 70px;
+  }
+  &_p {
+    p {
+      @include paragraph(400, 14px, #fff);
+
+      &:last-child {
+        @include paragraph(400, 12px, #fff);
+        opacity: 0.4;
+      }
+    }
+  }
+}
+.add_bottom {
+  h1 {
+    @include paragraph(700, 40px, #fff);
+  }
+  text-align: center;
+  @include flex(center, center, 20px);
+  flex-direction: column;
+  button {
+    @include flex(center, center, 10px);
+    border-radius: 20px;
+    padding: 10px 25px;
+    background-color: #4592ff;
+    color: #ffff;
+    border: none;
+  }
+}

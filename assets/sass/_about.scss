@@ -1,0 +1,62 @@
+@use "./mixns" as *;
+.about {
+  & {
+    background-color: #efefef;
+    padding: 50px 0;
+  }
+  &_box_grid {
+    gap: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+  &_card {
+    h1 {
+      @include paragraph(700, 20px, #262d33);
+    }
+    p {
+      @include paragraph(400, 14, #4b5157);
+      margin: 15px 0;
+    }
+  }
+  &_nav {
+    p {
+      @include paragraph(900, 12px, #4592ff);
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_icon {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &_svg {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &_left_grid {
+    border-radius: 20px;
+    background-color: #fff;
+  }
+}
+.about > div {
+  display: flex;
+  gap: 30px;
+}
+.right_boxs {
+  display: flex;
+  gap: 10px;
+  padding: 10px 25px;
+  background-color: #fff;
+  border-bottom: 1px solid #d9dadb;
+  align-items: center;
+  p {
+    @include paragraph(400, 14px, #4b5157);
+  }
+  .right_card :nth-of-type(2) {
+    @include paragraph(400, 12px, #939699);
+  }
+}
