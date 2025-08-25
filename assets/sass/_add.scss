@@ -210,16 +210,5 @@
       @include paragraph(400, 14px, #4b5157);
       margin: 20px 0;
     }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 14px;
-      }
-
-      p {
-        font-size: 12px;
-        margin: 15px 0;
-      }
-    }
   }
 }
