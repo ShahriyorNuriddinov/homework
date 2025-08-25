@@ -1,0 +1,151 @@
+@use "./mixns" as *;
+
+.footer {
+  h1 {
+    @include paragraph(700, 40px, #262d33);
+    text-align: center;
+  }
+
+  input {
+    border: 1px solid #d9dadb;
+    border-radius: 5px;
+    padding: 15px 50px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  button {
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 15px 30px;
+    border: none;
+    background: #4592ff;
+  }
+
+  &_color {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 4px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+    &_line {
+      background: #ff4f52;
+    }
+    &_line1 {
+      background: #ac8ee3;
+    }
+    &_line2 {
+      background: #4592ff;
+    }
+    &_line3 {
+      background: #ffa34d;
+    }
+    &_line4 {
+      background: #3dc47e;
+    }
+  }
+
+  &_links {
+    @include flex(center, space-between, 0);
+
+    ul {
+      @include flex(start, start, 0);
+      flex-direction: column;
+
+      li {
+        margin: 10px 0;
+
+        &:first-child {
+          @include paragraph(900, 14px, #262d33);
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    @include flex(center, space-between, 0);
+    flex-wrap: wrap;
+  }
+
+  &_left {
+    @include flex(center, center, 20px);
+    flex-wrap: wrap;
+  }
+
+  &_list {
+    @include flex(center, center, 20px);
+    flex-wrap: wrap;
+  }
+
+  &_logo {
+    @include flex(center, center, 20px);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    &_links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    &_bottom {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    &_left,
+    &_list,
+    &_logo {
+      justify-content: center;
+      gap: 15px;
+    }
+
+    button {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    input {
+      padding: 12px 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    &_color {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &_color {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    button,
+    input {
+      width: 100%;
+    }
+  }
+}

@@ -897,48 +897,40 @@ i {
   opacity: 0.4;
 }
 
-.add_bottom {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.add_wrapper_list {
+  display: grid;
+  grid-template-columns: 40% 60%;
   gap: 20px;
-  flex-direction: column;
+  margin: 45px;
 }
-.add_bottom h1 {
+.add_wrapper_card {
+  padding: 5px;
+}
+.add_wrapper_card p:nth-child(1) {
+  font-weight: 900;
+  font-size: 12px;
+  color: #6e99ae;
+}
+.add_wrapper_card h1 {
   font-weight: 700;
-  font-size: 40px;
-  color: #fff;
-}
-.add_bottom button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 20px;
-  padding: 10px 25px;
-  background-color: #4592ff;
-  color: white;
-  border: none;
-}
-.add_bottom_small {
-  padding: 25px 20px;
-}
-.add_bottom_small h1 {
-  font-weight: 700;
-  font-size: 16px;
-  color: #262d33;
-  font-family: var(--second-family);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 156%;
+  font-size: 25px;
   color: #262d33;
 }
-.add_bottom_small p {
+.add_wrapper_card p {
   font-weight: 400;
   font-size: 14px;
   color: #4b5157;
   margin: 20px 0;
+}
+.add_wrapper_card button:nth-child(4) {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  gap: 5px;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: #4592ff;
 }
 
 .add {
@@ -1089,6 +1081,158 @@ i {
   .add_bottom_small p {
     font-size: 12px;
     margin: 15px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .add_wrapper_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 45px;
+  }
+}
+.footer h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #262d33;
+  text-align: center;
+}
+.footer input {
+  border: 1px solid #d9dadb;
+  border-radius: 5px;
+  padding: 15px 50px;
+  width: 100%;
+  max-width: 400px;
+}
+.footer button {
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 15px 30px;
+  border: none;
+  background: #4592ff;
+}
+.footer_color {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 4px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.footer_color_line {
+  background: #ff4f52;
+}
+.footer_color_line1 {
+  background: #ac8ee3;
+}
+.footer_color_line2 {
+  background: #4592ff;
+}
+.footer_color_line3 {
+  background: #ffa34d;
+}
+.footer_color_line4 {
+  background: #3dc47e;
+}
+.footer_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.footer_links ul {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 0;
+  flex-direction: column;
+}
+.footer_links ul li {
+  margin: 10px 0;
+}
+.footer_links ul li:first-child {
+  font-weight: 900;
+  font-size: 14px;
+  color: #262d33;
+}
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.footer_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .footer_links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer_links ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer_links ul li {
+    margin: 5px 0;
+  }
+  .footer_bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer_left, .footer_list, .footer_logo {
+    justify-content: center;
+    gap: 15px;
+  }
+  .footer button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+  .footer input {
+    padding: 12px 20px;
+  }
+  .footer h1 {
+    font-size: 28px;
+  }
+  .footer_color {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .footer_color {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer h1 {
+    font-size: 24px;
+  }
+  .footer button,
+  .footer input {
+    width: 100%;
   }
 }
 
